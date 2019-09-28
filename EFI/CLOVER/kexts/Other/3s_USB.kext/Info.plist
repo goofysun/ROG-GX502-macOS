@@ -142,6 +142,15 @@
 				</data>
 				<key>ports</key>
 				<dict>
+					<key>HS01</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>port</key>
+						<data>
+						AQAAAA==
+						</data>
+					</dict>
 					<key>HS03</key>
 					<dict>
 						<key>UsbConnector</key>

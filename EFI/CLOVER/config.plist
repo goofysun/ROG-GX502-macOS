@@ -51,20 +51,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>SSDT-TYPC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					MTdQWFNYFDNf
-					</data>
-					<key>Replace</key>
-					<data>
-					MTdQWFNYFDNY
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>HECI to IMEI</string>
 					<key>Disabled</key>
 					<false/>
@@ -79,20 +65,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_DSM to XDSM</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					X0RTTQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WERTTQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>_OSI to XOSI</string>
 					<key>Disabled</key>
 					<false/>
@@ -103,20 +75,6 @@
 					<key>Replace</key>
 					<data>
 					WE9TSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					U0FUMA==
-					</data>
-					<key>Replace</key>
-					<data>
-					U0FUQQ==
 					</data>
 				</dict>
 				<dict>
@@ -226,7 +184,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 -cdfon -wegnoegpu -igfxnohdmi</string>
+		<string>dart=0 -wegnoegpu -lilubetaall</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -253,6 +211,8 @@
 		<dict>
 			<key>AFGLowPowerState</key>
 			<true/>
+			<key>Inject</key>
+			<integer>21</integer>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -267,10 +227,6 @@
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>
-				CQClPg==
-				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
 				<key>device_type</key>
@@ -316,10 +272,6 @@
 		<key>UseIntelHDMI</key>
 		<false/>
 	</dict>
-	<key>DisableDrivers</key>
-	<array>
-		<string>VBoxHfs</string>
-	</array>
 	<key>GUI</key>
 	<dict>
 		<key>#ScreenResolution</key>
@@ -370,7 +322,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>random</string>
+		<string>bootcamp</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -402,6 +354,7 @@
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
+			<string>\System\Library\Extensions\IOGraphicsFamily.kext</string>
 		</array>
 		<key>KernelLapic</key>
 		<true/>
@@ -458,94 +411,6 @@
 		</array>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng) 10.14.x
-
-</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g/sPDw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>om.apple.iokit.IOUSBHostFamily</string>
-				<key>Replace</key>
-				<data>
-				g/s/Dw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart) 10.14.x
-
-</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g+MP0w==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Replace</key>
-				<data>
-				g+M/0w==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart) 10.14.x
-
-</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g/sPDw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				g/s/Dw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart) 10.14.x
-
-</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g/8PDw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>om.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				g/8/Dw==
-				</data>
-			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>disable IOBufferCopyController (Credit by DalianSky)</string>
@@ -608,6 +473,10 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string>C02851102GUJP4FAD</string>
+		<key>ROM</key>
+		<string>UseMacAddr0</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -622,7 +491,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02837104CDJP4F1F</string>
+		<string>C02851102GUJP4FAD</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -652,16 +521,20 @@
 		<key>ProductName</key>
 		<string>MacBookPro15,1</string>
 		<key>SerialNumber</key>
-		<string>C02XD03ZKGYG</string>
+		<string>C02XVUYEKGYG</string>
 		<key>SmUUID</key>
-		<string>E9BCC6DD-5BB3-40F2-B4A0-29B979030618</string>
+		<string>AD100829-3B50-4617-92C1-00414764ADB3</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>CustomUUID</key>
+		<string>E34947BF-CA0D-52CA-9227-F7B8ACF46DDB</string>
 		<key>InjectKexts</key>
-		<string>Detect</string>
+		<string>Yes</string>
+		<key>InjectSystemID</key>
+		<true/>
 	</dict>
 </dict>
 </plist>
